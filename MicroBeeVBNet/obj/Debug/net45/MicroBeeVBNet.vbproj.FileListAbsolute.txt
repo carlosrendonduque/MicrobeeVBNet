@@ -1,0 +1,11 @@
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net45\MicroBeeVBNet.exe.config
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net45\MicroBeeVBNet.exe
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net45\MicroBeeVBNet.pdb
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net45\MicroBeeVBNet.vbprojAssemblyReference.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net45\MicroBeeVBNet.AssemblyInfoInputs.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net45\MicroBeeVBNet.AssemblyInfo.vb
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net45\MicroBeeVBNet.exe
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net45\MicroBeeVBNet.pdb
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net45\Newtonsoft.Json.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net45\MicroBeeVBNet.vbproj.CoreCompileInputs.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net45\MicroBeeVBNet.vbproj.CopyComplete

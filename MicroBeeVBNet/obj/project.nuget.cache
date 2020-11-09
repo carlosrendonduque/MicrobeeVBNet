@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zaHE8G3n8Ej8jDHcpBT/fXoJe5hntsL6IYiNKfkEFThn6/PTB8F6qfbkOoHTdQnccJAROFyULR7Tv4/Hh2VA4A==",
+  "dgSpecHash": "tk2zida9Y01VJtHHftW0AXYvX0VVhS169l6U/6CcVgeHVQXHp7QgQA5MqmOQDi16KyXluYHwBb03CfkTi1sRVQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\CARLOS\\Documents\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+  ],
   "logs": []
 }

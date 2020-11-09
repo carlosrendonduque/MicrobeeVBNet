@@ -1,0 +1,9 @@
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net40\MicroBeeVBNet.vbprojAssemblyReference.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net40\MicroBeeVBNet.AssemblyInfoInputs.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net40\MicroBeeVBNet.AssemblyInfo.vb
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net40\MicroBeeVBNet.vbproj.CoreCompileInputs.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net40\MicroBeeVBNet.exe.config
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net40\MicroBeeVBNet.exe
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net40\MicroBeeVBNet.pdb
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net40\MicroBeeVBNet.exe
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net40\MicroBeeVBNet.pdb

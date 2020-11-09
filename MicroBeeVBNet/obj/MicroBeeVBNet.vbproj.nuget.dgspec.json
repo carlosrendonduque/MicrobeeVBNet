@@ -1,31 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\CARLOS\\Documents\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj": {}
+    "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj": {}
   },
   "projects": {
-    "C:\\Users\\CARLOS\\Documents\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj": {
+    "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\CARLOS\\Documents\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
+        "projectUniqueName": "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
         "projectName": "MicroBeeVBNet",
-        "projectPath": "C:\\Users\\CARLOS\\Documents\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
-        "packagesPath": "C:\\Users\\CARLOS\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\CARLOS\\Documents\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet\\obj\\",
+        "projectPath": "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
+        "packagesPath": "C:\\Users\\carlo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\CARLOS\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carlo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net45"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
+          "net45": {
             "projectReferences": {}
           }
         },
@@ -36,23 +36,19 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
+        "net45": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[12.0.3, )"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100-preview.5.20279.10\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
         }
       }
     }

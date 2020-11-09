@@ -11,3 +11,5 @@ C:\Users\CARLOS\Documents\repos\MicrobeeVBNet\MicroBeeVBNet\MicroBeeVBNet\obj\De
 C:\Users\CARLOS\Documents\repos\MicrobeeVBNet\MicroBeeVBNet\MicroBeeVBNet\obj\Debug\net5.0\MicroBeeVBNet.dll
 C:\Users\CARLOS\Documents\repos\MicrobeeVBNet\MicroBeeVBNet\MicroBeeVBNet\obj\Debug\net5.0\MicroBeeVBNet.pdb
 C:\Users\CARLOS\Documents\repos\MicrobeeVBNet\MicroBeeVBNet\MicroBeeVBNet\obj\Debug\net5.0\MicroBeeVBNet.genruntimeconfig.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net5.0\MicroBeeVBNet.exe
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net5.0\MicroBeeVBNet.pdb
