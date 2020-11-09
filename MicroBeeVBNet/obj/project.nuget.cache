@@ -1,10 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "tk2zida9Y01VJtHHftW0AXYvX0VVhS169l6U/6CcVgeHVQXHp7QgQA5MqmOQDi16KyXluYHwBb03CfkTi1sRVQ==",
+  "dgSpecHash": "4waxq0tEJZ+0IR7kZtwXzhtI/votG4Wgob5pt19el9FTrKGDNLA6917z/iNr2pHSOyu78IidGD0T4bTL0sR0Pw==",
   "success": true,
   "projectFilePath": "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
   "expectedPackageFiles": [
-    "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512"
+    "C:\\Users\\carlo\\.nuget\\packages\\google.apis.core\\1.49.0\\google.apis.core.1.49.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\graphql.client\\3.2.0\\graphql.client.3.2.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\graphql.client.abstractions\\3.2.0\\graphql.client.abstractions.3.2.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\graphql.client.abstractions.websocket\\3.2.0\\graphql.client.abstractions.websocket.3.2.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\graphql.primitives\\3.2.0\\graphql.primitives.3.2.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.net.websockets.client.managed\\1.0.22\\system.net.websockets.client.managed.1.0.22.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.reactive\\4.3.2\\system.reactive.4.3.2.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.3\\system.threading.tasks.extensions.4.5.3.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }
