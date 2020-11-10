@@ -56,6 +56,19 @@
           "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
         }
       },
+      "GraphQL.Client.Serializer.Newtonsoft/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Client.Abstractions.Websocket": "3.2.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        }
+      },
       "GraphQL.Primitives/3.2.0": {
         "type": "package",
         "compile": {
@@ -63,6 +76,37 @@
         },
         "runtime": {
           "lib/netstandard2.0/GraphQL.Primitives.dll": {}
+        }
+      },
+      "Microsoft.Graph/3.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Graph.Core": "1.22.0"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Graph.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Graph.dll": {}
+        }
+      },
+      "Microsoft.Graph.Core/1.22.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.1",
+          "System.Diagnostics.DiagnosticSource": "4.6.0",
+          "System.ValueTuple": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Graph.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Graph.Core.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.3": {
@@ -81,6 +125,36 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/4.6.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Net.WebSockets.Client.Managed/1.0.22": {
@@ -217,6 +291,19 @@
           "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.dll": {}
         }
       },
+      "GraphQL.Client.Serializer.Newtonsoft/3.2.0": {
+        "type": "package",
+        "dependencies": {
+          "GraphQL.Client.Abstractions.Websocket": "3.2.0",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll": {}
+        }
+      },
       "GraphQL.Primitives/3.2.0": {
         "type": "package",
         "compile": {
@@ -224,6 +311,37 @@
         },
         "runtime": {
           "lib/netstandard2.0/GraphQL.Primitives.dll": {}
+        }
+      },
+      "Microsoft.Graph/3.19.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Graph.Core": "1.22.0"
+        },
+        "compile": {
+          "lib/net461/Microsoft.Graph.dll": {}
+        },
+        "runtime": {
+          "lib/net461/Microsoft.Graph.dll": {}
+        }
+      },
+      "Microsoft.Graph.Core/1.22.0": {
+        "type": "package",
+        "dependencies": {
+          "Newtonsoft.Json": "6.0.1",
+          "System.Diagnostics.DiagnosticSource": "4.6.0",
+          "System.ValueTuple": "4.3.0"
+        },
+        "frameworkAssemblies": [
+          "Microsoft.CSharp",
+          "System",
+          "System.Net.Http"
+        ],
+        "compile": {
+          "lib/net45/Microsoft.Graph.Core.dll": {}
+        },
+        "runtime": {
+          "lib/net45/Microsoft.Graph.Core.dll": {}
         }
       },
       "Newtonsoft.Json/12.0.3": {
@@ -242,6 +360,36 @@
         },
         "runtime": {
           "lib/netstandard2.0/System.Buffers.dll": {}
+        }
+      },
+      "System.Diagnostics.DiagnosticSource/4.6.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Memory": "4.5.3"
+        },
+        "frameworkAssemblies": [
+          "System",
+          "mscorlib"
+        ],
+        "compile": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        },
+        "runtime": {
+          "lib/net46/System.Diagnostics.DiagnosticSource.dll": {}
+        }
+      },
+      "System.Memory/4.5.3": {
+        "type": "package",
+        "dependencies": {
+          "System.Buffers": "4.4.0",
+          "System.Numerics.Vectors": "4.4.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.2"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Memory.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
       "System.Net.WebSockets.Client.Managed/1.0.22": {
@@ -394,6 +542,21 @@
         "lib/netstandard2.0/GraphQL.Client.Abstractions.Websocket.xml"
       ]
     },
+    "GraphQL.Client.Serializer.Newtonsoft/3.2.0": {
+      "sha512": "7fipj8HT5P4vfeTd6RWHZYVNjRGCmi5z6rvYa4p5odMAGqDdnoqRi2/UFVZJr90azo2KtB6OM26HgCqlO6VNEg==",
+      "type": "package",
+      "path": "graphql.client.serializer.newtonsoft/3.2.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "graphql.client.serializer.newtonsoft.3.2.0.nupkg.sha512",
+        "graphql.client.serializer.newtonsoft.nuspec",
+        "icon.png",
+        "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.dll",
+        "lib/netstandard2.0/GraphQL.Client.Serializer.Newtonsoft.xml"
+      ]
+    },
     "GraphQL.Primitives/3.2.0": {
       "sha512": "mHYZECTsq5hclsUJV8mI55XL/85xVpTDdq88k8aLrYVFBwAuPHU4oT7gbzWE41lRWeHEzJeZJ6VdY4Mzoqg3YQ==",
       "type": "package",
@@ -407,6 +570,44 @@
         "icon.png",
         "lib/netstandard2.0/GraphQL.Primitives.dll",
         "lib/netstandard2.0/GraphQL.Primitives.xml"
+      ]
+    },
+    "Microsoft.Graph/3.19.0": {
+      "sha512": "Vt1KRsyvJQIjwS+kDPsuNfcZX/V/iYrNv1qRPQUZGe3DKujZeUprpxWuOAbxoZFSE5d7d0ZIULmaDaHF8eg1bA==",
+      "type": "package",
+      "path": "microsoft.graph/3.19.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/net461/Microsoft.Graph.dll",
+        "lib/net461/Microsoft.Graph.xml",
+        "lib/netstandard2.0/Microsoft.Graph.dll",
+        "lib/netstandard2.0/Microsoft.Graph.xml",
+        "microsoft.graph.3.19.0.nupkg.sha512",
+        "microsoft.graph.nuspec"
+      ]
+    },
+    "Microsoft.Graph.Core/1.22.0": {
+      "sha512": "pN2ZB/7YpmWXTMlc0Z6ZO657/NlAMfYWw3T6wQF4zW1Adz8cCTP+KlAkZPutlBqSEmjfGr0syH2IxxF3omv/Bw==",
+      "type": "package",
+      "path": "microsoft.graph.core/1.22.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.txt",
+        "lib/monoandroid70/Microsoft.Graph.Core.dll",
+        "lib/monoandroid70/Microsoft.Graph.Core.xml",
+        "lib/net45/Microsoft.Graph.Core.dll",
+        "lib/net45/Microsoft.Graph.Core.xml",
+        "lib/netstandard1.1/Microsoft.Graph.Core.dll",
+        "lib/netstandard1.1/Microsoft.Graph.Core.xml",
+        "lib/xamarinios10/Microsoft.Graph.Core.dll",
+        "lib/xamarinios10/Microsoft.Graph.Core.xml",
+        "lib/xamarinmac20/Microsoft.Graph.Core.dll",
+        "lib/xamarinmac20/Microsoft.Graph.Core.xml",
+        "microsoft.graph.core.1.22.0.nupkg.sha512",
+        "microsoft.graph.core.nuspec"
       ]
     },
     "Newtonsoft.Json/12.0.3": {
@@ -461,6 +662,52 @@
         "ref/netstandard2.0/System.Buffers.xml",
         "system.buffers.4.4.0.nupkg.sha512",
         "system.buffers.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Diagnostics.DiagnosticSource/4.6.0": {
+      "sha512": "mbBgoR0rRfl2uimsZ2avZY8g7Xnh1Mza0rJZLPcxqiMWlkGukjmRkuMJ/er+AhQuiRIh80CR/Hpeztr80seV5g==",
+      "type": "package",
+      "path": "system.diagnostics.diagnosticsource/4.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net45/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net45/System.Diagnostics.DiagnosticSource.xml",
+        "lib/net46/System.Diagnostics.DiagnosticSource.dll",
+        "lib/net46/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.1/System.Diagnostics.DiagnosticSource.xml",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.dll",
+        "lib/netstandard1.3/System.Diagnostics.DiagnosticSource.xml",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.dll",
+        "lib/portable-net45+win8+wpa81/System.Diagnostics.DiagnosticSource.xml",
+        "system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+        "system.diagnostics.diagnosticsource.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Memory/4.5.3": {
+      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "type": "package",
+      "path": "system.memory/4.5.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.1/System.Memory.dll",
+        "lib/netstandard1.1/System.Memory.xml",
+        "lib/netstandard2.0/System.Memory.dll",
+        "lib/netstandard2.0/System.Memory.xml",
+        "ref/netcoreapp2.1/_._",
+        "system.memory.4.5.3.nupkg.sha512",
+        "system.memory.nuspec",
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
@@ -658,6 +905,8 @@
     ".NETFramework,Version=v4.6.2": [
       "Google.Apis.Core >= 1.49.0",
       "GraphQL.Client >= 3.2.0",
+      "GraphQL.Client.Serializer.Newtonsoft >= 3.2.0",
+      "Microsoft.Graph >= 3.19.0",
       "Newtonsoft.Json >= 12.0.3"
     ]
   },
@@ -705,6 +954,14 @@
           "GraphQL.Client": {
             "target": "Package",
             "version": "[3.2.0, )"
+          },
+          "GraphQL.Client.Serializer.Newtonsoft": {
+            "target": "Package",
+            "version": "[3.2.0, )"
+          },
+          "Microsoft.Graph": {
+            "target": "Package",
+            "version": "[3.19.0, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",

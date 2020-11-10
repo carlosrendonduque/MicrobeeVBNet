@@ -4,10 +4,32 @@ Imports System.Runtime.Remoting.Messaging
 Imports Newtonsoft.Json.Linq
 Imports Newtonsoft.Json
 Imports GraphQL.Client.Http
-Imports Google.Apis.Json
+'Imports Google.Apis.Json
+Imports GraphQL
+Imports GraphQL.Client.Serializer.Newtonsoft
+Imports Microsoft.Graph
+
+Imports System.Data.SqlClient
+
+
+Public Class ResponseType
+    Public Property Robot As RobotType
+End Class
+
+Public Class RobotType
+    Public Property name As String
+End Class
 
 Module Program
 
+    Private myConn As SqlConnection
+    Private myCmd As SqlCommand
+    Private myReader As SqlDataReader
+    Private results As String
+    Private sql_instruction As String
+    Private machine As String = "DESKTOP-FAJHIAM"
+    Private robot As String = "RoborPuebasLeo"
+    Public Declare Sub Sleep Lib "kernel32" Alias "Sleep" (ByVal dwMilliseconds As Long)
     Dim LOGMESSAGE_TRANSITION_SYSTEM_EXCEPTION As String = "System Exception"
     Dim LOGMESSAGE_STATE_PROCESS_FINISHED As String = "Process Finished"
     Dim LOGMESSAGE_STATE_TRANSACTION_IN_PROGRESS As String = "Transaction in Progress"
@@ -27,9 +49,10 @@ Module Program
     Dim table As New DataTable
 
 
-    Sub Main(args As String())
 
-        Dim graphQLClient = New GraphQLHttpClient("https://api.example.com/graphql", New NewtonsoftJsonSerializer())
+    Sub Main(args As String())
+        'NewtonsoftJsonSerializer
+
         'initialization
         'Read Configuration file And initialize applications used in the process.
         Dim transition As String
@@ -40,10 +63,16 @@ Module Program
 
                 For Each row As DataRow In table.Rows
                     Try
-                        save_log("Trace", LOGMESSAGE_TRANSITION_NEW_TRANSACTION)
-                        save_log("Trace", LOGMESSAGE_STATE_TRANSACTION_IN_PROGRESS)
-                        save_log("Trace", "Id: " & row("Id") & " Name: " & row("Name") & " Date: " & row("Date"))
-                        save_log("Trace", LOGMESSAGE_SUCCESS)
+                        Dim sGUID As String
+                        sGUID = System.Guid.NewGuid.ToString()
+                        save_log("Trace", LOGMESSAGE_TRANSITION_NEW_TRANSACTION, sGUID)
+                        Sleep(1000)
+                        save_log("Trace", LOGMESSAGE_STATE_TRANSACTION_IN_PROGRESS, sGUID)
+                        Sleep(1000)
+                        save_log("Trace", "Id: " & row("Id") & " Name: " & row("Name") & " Date: " & row("Date"), sGUID)
+                        Sleep(3000)
+                        save_log("Trace", LOGMESSAGE_SUCCESS, sGUID)
+                        Sleep(1000)
                     Catch ex As Exception
                         save_log("Trace", LOGMESSAGE_TRANSITION_SYSTEM_EXCEPTION)
                         'Reintentar MAX_RETRY_NUMBER veces
@@ -67,25 +96,65 @@ Module Program
             'If first Then run, read configuration
             If CONFIG.Count = 0 Then
                 initialize_all_settings()
+                Sleep(1000)
                 kill_all_processes()
+                Sleep(1000)
             Else
             End If
             init_all_applications()
+            Sleep(3000)
             initialize = LOGMESSAGE_TRANSITION_SUCCESSFUL
         Catch ex As Exception
             initialize = LOGMESSAGE_APPLICATION_EXCEPTION
         End Try
     End Function
 
-    Public Sub save_log(ByVal LogLevel As String, ByVal Message As String)
+    Public Sub save_log(ByVal LogLevel As String, ByVal Message As String, Optional TransactionNumber As String = "")
+        Try
 
-        Console.WriteLine("LogLevel: " & LogLevel & " / " & "Message: " & Message)
+            'CREATE TABLE [dbo].[log_robots](
+            '[machine] [nvarchar](max) NULL,
+            '[robot] [nvarchar](max) NULL,
+            '[hour] [datetime] NULL,
+            '[log_level] [nvarchar](max) NULL,
+            '[message] [nvarchar](max) NULL
+            ') ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+
+
+            myConn = New SqlConnection("Data Source=.;Initial Catalog=karakuri;Integrated Security=True")
+            myConn.Open()
+            sql_instruction = "INSERT INTO [dbo].[log_robots]
+                                ([machine]
+                                ,[robot]
+                                ,[hour]
+                                ,[log_level]
+                                ,[message]
+                                ,[transaction_number])
+                            VALUES
+                                ('" & machine & "'
+                                ,'" & robot & "'
+                                ,'" & DateTime.Now & "'
+                                ,'" & LogLevel & "'
+                                ,'" & Message & "'
+                                ,'" & TransactionNumber & "')"
+
+            myCmd = New SqlCommand(sql_instruction, myConn)
+            myCmd.ExecuteNonQuery()
+            myConn.Close()
+            Console.WriteLine("Trace " & LogLevel & " " & " Message " & Message)
+
+        Catch ex As Exception
+        End Try
     End Sub
+
+
+
 
     'Initialize, populate And output the configuration values to be used throughout the project.
     Public Sub initialize_all_settings()
         save_log("Trace", LOGMESSAGE_AUTOMATION_STARTED)
     End Sub
+
 
 
     'Use the Kill Process activity to force the termination of  processes representing applications used in the business process being automated.
@@ -106,8 +175,10 @@ Module Program
         Try
             'TODO: Code to open applications used in the business process being automated
             save_log("Trace", LOGMESSAGE_CLOSING_APPLICATIONS)
+            Sleep(2000)
         Catch ex As Exception
             kill_all_processes()
+            Sleep(1000)
         End Try
     End Sub
 

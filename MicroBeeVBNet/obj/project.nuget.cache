@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4waxq0tEJZ+0IR7kZtwXzhtI/votG4Wgob5pt19el9FTrKGDNLA6917z/iNr2pHSOyu78IidGD0T4bTL0sR0Pw==",
+  "dgSpecHash": "Pc2OYhPzg7VPh6b1B7lDzP69IAxAwsLNuyGIOL/tOZ7/l2St9ne3x1HOP5+GzI8QRRv4X12ndOdbp4Ql2ZWwFg==",
   "success": true,
   "projectFilePath": "C:\\Users\\carlo\\OneDrive\\Documentos\\repos\\MicrobeeVBNet\\MicroBeeVBNet\\MicroBeeVBNet.vbproj",
   "expectedPackageFiles": [
@@ -8,9 +8,14 @@
     "C:\\Users\\carlo\\.nuget\\packages\\graphql.client\\3.2.0\\graphql.client.3.2.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\graphql.client.abstractions\\3.2.0\\graphql.client.abstractions.3.2.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\graphql.client.abstractions.websocket\\3.2.0\\graphql.client.abstractions.websocket.3.2.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\graphql.client.serializer.newtonsoft\\3.2.0\\graphql.client.serializer.newtonsoft.3.2.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\graphql.primitives\\3.2.0\\graphql.primitives.3.2.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.graph\\3.19.0\\microsoft.graph.3.19.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\microsoft.graph.core\\1.22.0\\microsoft.graph.core.1.22.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.6.0\\system.diagnostics.diagnosticsource.4.6.0.nupkg.sha512",
+    "C:\\Users\\carlo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.net.websockets.client.managed\\1.0.22\\system.net.websockets.client.managed.1.0.22.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.numerics.vectors\\4.4.0\\system.numerics.vectors.4.4.0.nupkg.sha512",
     "C:\\Users\\carlo\\.nuget\\packages\\system.reactive\\4.3.2\\system.reactive.4.3.2.nupkg.sha512",

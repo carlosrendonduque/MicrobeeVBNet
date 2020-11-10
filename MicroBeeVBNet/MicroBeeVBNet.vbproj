@@ -7,11 +7,35 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Google.Apis.Core" Version="1.49.0" />
+    <PackageReference Include="GraphQL.Client" Version="3.2.0" />
+    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft" Version="3.2.0" />
+    <PackageReference Include="Microsoft.Graph" Version="3.19.0" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Net.Http" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="karakuriDataSet.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>karakuriDataSet.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="karakuriDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>karakuriDataSet.Designer.vb</LastGenOutput>
+    </None>
   </ItemGroup>
 
 </Project>
