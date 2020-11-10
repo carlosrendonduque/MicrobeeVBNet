@@ -52,7 +52,7 @@ Module Program
 
     Sub Main(args As String())
         'NewtonsoftJsonSerializer
-
+        Dim i = 0
         'initialization
         'Read Configuration file And initialize applications used in the process.
         Dim transition As String
@@ -62,19 +62,21 @@ Module Program
             If transition = LOGMESSAGE_TRANSACTION_DATA_LOADED Then
 
                 For Each row As DataRow In table.Rows
+                    Dim sGUID As String
+                    sGUID = System.Guid.NewGuid.ToString()
                     Try
-                        Dim sGUID As String
-                        sGUID = System.Guid.NewGuid.ToString()
-                        save_log("Trace", LOGMESSAGE_TRANSITION_NEW_TRANSACTION, sGUID)
+                        save_log("Trace", LOGMESSAGE_TRANSITION_NEW_TRANSACTION, sGUID, "", "Id: " & row("Id") & " Name: " & row("Name") & " Date: " & row("Date"))
                         Sleep(1000)
                         save_log("Trace", LOGMESSAGE_STATE_TRANSACTION_IN_PROGRESS, sGUID)
-                        Sleep(1000)
-                        save_log("Trace", "Id: " & row("Id") & " Name: " & row("Name") & " Date: " & row("Date"), sGUID)
                         Sleep(3000)
+                        i = i + 1
+                        If i = 2 Then
+                            Throw New System.Exception
+                        End If
                         save_log("Trace", LOGMESSAGE_SUCCESS, sGUID)
                         Sleep(1000)
                     Catch ex As Exception
-                        save_log("Trace", LOGMESSAGE_TRANSITION_SYSTEM_EXCEPTION)
+                        save_log("Trace", LOGMESSAGE_TRANSITION_SYSTEM_EXCEPTION, sGUID, ex.Message)
                         'Reintentar MAX_RETRY_NUMBER veces
                     End Try
 
@@ -109,9 +111,9 @@ Module Program
         End Try
     End Function
 
-    Public Sub save_log(ByVal LogLevel As String, ByVal Message As String, Optional TransactionNumber As String = "")
+    Public Sub save_log(ByVal LogLevel As String, ByVal Message As String, Optional TransactionNumber As String = "", Optional Description As String = "", Optional payload As String = "")
         Try
-
+            Description = Replace(Description, "'", "")
             'CREATE TABLE [dbo].[log_robots](
             '[machine] [nvarchar](max) NULL,
             '[robot] [nvarchar](max) NULL,
@@ -120,7 +122,7 @@ Module Program
             '[message] [nvarchar](max) NULL
             ') ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
-
+            Dim Log_Message As String = ""
             myConn = New SqlConnection("Data Source=.;Initial Catalog=karakuri;Integrated Security=True")
             myConn.Open()
             sql_instruction = "INSERT INTO [dbo].[log_robots]
@@ -129,19 +131,31 @@ Module Program
                                 ,[hour]
                                 ,[log_level]
                                 ,[message]
-                                ,[transaction_number])
+                                ,[transaction_number]
+                                ,[description]
+                                ,[payload])
                             VALUES
                                 ('" & machine & "'
                                 ,'" & robot & "'
                                 ,'" & DateTime.Now & "'
                                 ,'" & LogLevel & "'
                                 ,'" & Message & "'
-                                ,'" & TransactionNumber & "')"
+                                ,'" & TransactionNumber & "'
+                                ,'" & Description & "'
+                                ,'" & payload & "')"
 
             myCmd = New SqlCommand(sql_instruction, myConn)
             myCmd.ExecuteNonQuery()
             myConn.Close()
-            Console.WriteLine("Trace " & LogLevel & " " & " Message " & Message)
+
+            Log_Message = "Trace " & LogLevel & " " & " Message " & Message
+            If Description <> "" Then
+                Log_Message = Log_Message & " Description " & Description
+            End If
+            If payload <> "" Then
+                Log_Message = Log_Message & " Payload " & payload
+            End If
+            Console.WriteLine(Log_Message)
 
         Catch ex As Exception
         End Try
@@ -203,10 +217,21 @@ Module Program
             table.Columns.Add("Date", GetType(DateTime))
             ' Add five rows with those columns filled in the DataTable.
             table.Rows.Add(25, "Juan", DateTime.Now)
-            table.Rows.Add(50, "David", DateTime.Now)
-            table.Rows.Add(10, "Christoff", DateTime.Now)
-            table.Rows.Add(21, "Janet", DateTime.Now)
-            table.Rows.Add(100, "Melanie", DateTime.Now)
+
+            Dim lname() As String
+            Dim rand As New Random()
+            Dim ranLname As String
+            Dim i As Integer = 0
+            lname = IO.File.ReadAllLines("C:\random_names\random_names.txt")
+
+
+            For i = 1 To 10
+                ranLname = lname(rand.Next(0, lname.Length - 1))
+                table.Rows.Add(rand.Next(0, 1000), ranLname, DateTime.Now)
+                'table.Rows.Add(10, "Christoff", DateTime.Now)
+                'table.Rows.Add(21, "Janet", DateTime.Now)
+                'table.Rows.Add(100, "Melanie", DateTime.Now)
+            Next
             load_transaction_data = LOGMESSAGE_TRANSACTION_DATA_LOADED
         Catch ex As Exception
             '...handle exception...
