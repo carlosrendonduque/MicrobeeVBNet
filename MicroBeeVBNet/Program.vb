@@ -10,6 +10,7 @@ Imports GraphQL.Client.Serializer.Newtonsoft
 Imports Microsoft.Graph
 
 Imports System.Data.SqlClient
+Imports MySql.Data.MySqlClient
 
 
 Public Class ResponseType
@@ -123,7 +124,8 @@ Module Program
             ') ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
 
             Dim Log_Message As String = ""
-            myConn = New SqlConnection("Data Source=.;Initial Catalog=karakuri;Integrated Security=True")
+            'myConn = New SqlConnection("Data Source=.;Initial Catalog=karakuri;Integrated Security=True")
+            myConn = New SqlConnection("Server=127.0.0.1;Database=karakuri;Uid=karakuri;Pwd=123456789")
             myConn.Open()
             sql_instruction = "INSERT INTO [dbo].[log_robots]
                                 ([machine]
@@ -158,10 +160,62 @@ Module Program
             Console.WriteLine(Log_Message)
 
         Catch ex As Exception
+            Console.WriteLine(ex.Message)
         End Try
     End Sub
 
 
+    Public Sub save_log2(ByVal LogLevel As String, ByVal Message As String, Optional TransactionNumber As String = "", Optional Description As String = "", Optional payload As String = "")
+        Try
+
+            Dim mysqlcmd As MySqlCommand
+            Dim conn As MySqlConnection = New MySqlConnection("server=127.0.0.1;user=root;password=123456789;database=karakuri")
+
+            Dim Log_Message As String = ""
+            'myConn = New SqlConnection("Data Source=.;Initial Catalog=karakuri;Integrated Security=True")
+            'myConn = New MySqlConnection("server=localhost;user=root;password=123456789;database=karakuri")
+            'myConn.Open()
+            sql_instruction = "INSERT INTO [dbo].[log_robots]
+                                ([machine]
+                                ,[robot]
+                                ,[hour]
+                                ,[log_level]
+                                ,[message]
+                                ,[transaction_number]
+                                ,[description]
+                                ,[payload])
+                            VALUES
+                                ('" & machine & "'
+                                ,'" & robot & "'
+                                ,'" & DateTime.Now & "'
+                                ,'" & LogLevel & "'
+                                ,'" & Message & "'
+                                ,'" & TransactionNumber & "'
+                                ,'" & Description & "'
+                                ,'" & payload & "')"
+
+            'myCmd = New SqlCommand(sql_instruction, myConn)
+            'myCmd.ExecuteNonQuery()
+            'myConn.Close()
+
+            conn.Open()
+            mysqlcmd = New MySqlCommand(sql_instruction, conn)
+            mysqlcmd.ExecuteNonQuery()
+            conn.Close()
+
+            Log_Message = "Trace " & LogLevel & " " & " Message " & Message
+            If Description <> "" Then
+                Log_Message = Log_Message & " Description " & Description
+            End If
+            If payload <> "" Then
+                Log_Message = Log_Message & " Payload " & payload
+            End If
+            Console.WriteLine(Log_Message)
+
+        Catch ex As Exception
+            Console.WriteLine(ex.Message)
+        End Try
+    End Sub
 
 
     'Initialize, populate And output the configuration values to be used throughout the project.

@@ -120,5 +120,14 @@ C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\n
 C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\Microsoft.Graph.Core.dll
 C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\System.Diagnostics.DiagnosticSource.dll
 C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\System.Memory.dll
-C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net462\MicroBeeVBNet.vbproj.CoreCompileInputs.cache
 C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net462\MicroBeeVBNet.vbprojAssemblyReference.cache
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\BouncyCastle.Crypto.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\Google.Protobuf.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\K4os.Compression.LZ4.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\K4os.Compression.LZ4.Streams.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\K4os.Hash.xxHash.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\MySql.Data.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\Ubiety.Dns.Core.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\Zstandard.Net.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\bin\Debug\net462\Renci.SshNet.dll
+C:\Users\carlo\OneDrive\Documentos\repos\MicrobeeVBNet\MicroBeeVBNet\obj\Debug\net462\MicroBeeVBNet.vbproj.CoreCompileInputs.cache
